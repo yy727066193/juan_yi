@@ -79,7 +79,8 @@
       v-model:show="showPickerProcuringAgency"
       position="bottom"
       :safe-area-inset-bottom="true"
-      :overlay="true">
+      :overlay="true"
+      teleport="body">
       <van-picker
         show-toolbar
         :columns="procuringAgencyColumns"
@@ -91,7 +92,8 @@
       v-model:show="showPickerCategory"
       position="bottom"
       :safe-area-inset-bottom="true"
-      :overlay="true">
+      :overlay="true"
+      teleport="body">
       <van-picker
         show-toolbar
         :columns="categoryColumns"

@@ -50,7 +50,6 @@ export default {
   methods: {
     changeNav(item) { // 切换菜单`
       this.checkedNav = item.value;
-      // this.$router.push(`/${item.value}`);
     },
   },
 };

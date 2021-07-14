@@ -123,3 +123,35 @@ i {
 .cp {
   cursor: pointer;
 }
+
+/* 竖屏底下的查询 */
+@media screen and (orientation: portrait) {
+  body, .van-popup {
+    /* 适配齐刘海 */
+    padding-top: 1.25rem;
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+    
+    /* 适配底部小黑条 */
+    padding-bottom: 1rem;
+    padding-bottom: costant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+/* 横屏底下的查询 */
+@media screen and (orientation: landscape) {
+  body, .van-popup {
+    /* 以防万一写一个你本身适配其他手机的 */
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    padding-bottom: 1rem;
+    /* IOS 11支持 */
+    padding-right: constant(safe-area-inset-right);
+    padding-left: constant(safe-area-inset-left);
+    padding-bottom: constant(safe-area-inset-bottom); /* 为底下圆弧的高度 34px */
+    /*IOS 11.2版本版本支持*/
+    padding-right: env(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+    padding-bottom: env(safe-area-inset-bottom); /* 为底下圆弧的高度 34px */
+  }
+}
