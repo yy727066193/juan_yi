@@ -22,5 +22,6 @@ export default {
   @import "./assets/style/reset.less";
   .main-content {
     height: calc(100% - 3rem);
+    overflow-y: auto;
   }
 </style>

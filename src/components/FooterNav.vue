@@ -1,9 +1,9 @@
 <template>
   <ul class="footer-nav clearfix">
     <li v-for="(item, index) in navList" :key="index + ''"
-      class="footer-nav-item  fl"
+      class="footer-nav-item fl"
       @click="changeNav(item)">
-      <router-link :to="`/${item.value}`" replace>
+      <router-link :to="`${item.value}`" replace>
         <img :src="checkedNav === item.value ? item.imgUrl2 : item.imgUrl1" alt="nav">
         <span :class="{ 'checked': checkedNav === item.value }">{{ item.name }}</span>
       </router-link>
@@ -24,23 +24,23 @@ export default {
   name: 'FooterNav',
   data() {
     return {
-      checkedNav: 'add',
+      checkedNav: window.location.pathname,
       navList: [
         {
           name: '新增',
-          value: 'add',
+          value: '/',
           imgUrl1: additionBlack,
           imgUrl2: additionBlue,
         },
         {
           name: '列表',
-          value: 'list',
+          value: '/list',
           imgUrl1: createtaskBlack,
           imgUrl2: createtaskBlue,
         },
         {
           name: '我的',
-          value: 'my',
+          value: '/my',
           imgUrl1: peopleBlack,
           imgUrl2: peopleBlue,
         },

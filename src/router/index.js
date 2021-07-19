@@ -4,7 +4,7 @@ import List from '../views/List.vue';
 import My from '../views/My.vue';
 
 const routes = [
-  { path: '/add', name: 'Add', component: Add },
+  { path: '/', name: 'Add', component: Add },
   { path: '/list', name: 'List', component: List },
   { path: '/my', name: 'My', component: My },
 ];

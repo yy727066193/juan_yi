@@ -65,7 +65,7 @@
         placeholder="数量"
         :rules="rules.number"
         required/>
-      <div style="margin: 16px;">
+      <div style="margin: 1rem">
         <van-button
           type="primary"
           size="normal"
